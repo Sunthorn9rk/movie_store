@@ -3,6 +3,7 @@ import {useState, useEffect} from "react";
 import {MdLocalMovies} from "react-icons/md";
 import {IoTrashBinOutline} from "react-icons/io5";
 import {IoBagCheckOutline} from "react-icons/io5";
+import {MdOutlineShoppingCart} from "react-icons/md";
 
 // ดึงค่า API Key ผ่าน API ฝั่ง Server
 const useApiKey = () => {
@@ -179,7 +180,10 @@ const MovieSearch = () => {
 
       {/* Cart Section */}
       <div className="w-full max-w-3xl mt-8 p-4 bg-gray-100 rounded-lg shadow-md">
-        <h2 className="text-2xl font-bold mb-4 text-gray-800">Your Cart</h2>
+        <h2 className="flex text-4xl font-bold mb-4 text-gray-800">
+          <MdOutlineShoppingCart className="text-4xl mx-2" />
+          Your Cart
+        </h2>
         {cart.length === 0 ? (
           <p className="text-gray-400">Your cart is empty</p>
         ) : (
